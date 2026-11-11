@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>САЛОН-СИСТЕМА 2.0 — менторська програма Яни Гурської</title>
+<meta name="description" content="Менторська програма Яни Гурської для власниць салонів краси, клінік і сервісного бізнесу: фінанси, команда, адміністратор, клієнтська база. Старт грудневого потоку — 7 грудня.">
+<meta property="og:title" content="САЛОН-СИСТЕМА 2.0 — менторська програма Яни Гурської">
+<meta property="og:description" content="Для власниць салонів краси, клінік і сервісного бізнесу, які хочуть вийти з операційки і керувати бізнесом за цифрами.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F7F1E8; --sand:#EFE4D5; --latte:#DCC7AC; --caramel:#B0855C;
+  --coffee:#6F4E37; --espresso:#3A2A1F; --ink:#2E231C; --muted:#7A6555;
+  --card:#FFFBF5; --line:#E3D5C2;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1;color:var(--espresso)}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--caramel);font-weight:700;margin-bottom:14px}
+h2{font-size:clamp(32px,6vw,48px);margin-bottom:20px}
+.lead{font-size:18px;color:var(--muted);max-width:640px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:54px;padding:0 28px;border-radius:999px;font:600 16px Manrope,sans-serif;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.98)}
+.btn-main{background:var(--coffee);color:#fff}
+.btn-main:hover{background:var(--espresso)}
+.btn-ghost{background:transparent;color:var(--coffee);border:1.5px solid var(--latte)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(247,241,232,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:20px;letter-spacing:.06em;color:var(--espresso);text-decoration:none}
+nav .btn{min-height:40px;padding:0 18px;font-size:14px}
+.navlinks{display:none;gap:26px;font-size:14px;color:var(--muted)}
+.navlinks a{text-decoration:none}
+@media(min-width:860px){.navlinks{display:flex}}
+
+/* hero */
+.hero{padding:56px 0 64px;background:radial-gradient(120% 90% at 100% 0%,var(--sand) 0%,var(--cream) 60%)}
+.hero h1{font-size:clamp(46px,11vw,92px);letter-spacing:-.01em}
+.hero h1 span{color:var(--caramel)}
+.hero .lead{margin-top:18px;font-size:19px;color:var(--ink)}
+.dates{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:600;color:var(--coffee)}
+.chip b{color:var(--espresso)}
+
+/* pains */
+.pains{display:grid;gap:14px;margin-top:32px}
+@media(min-width:760px){.pains{grid-template-columns:1fr 1fr}}
+.pain{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.pain .n{font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--latte);font-weight:700;line-height:1}
+.pain h3{font-family:Manrope,sans-serif;font-size:17px;font-weight:700;margin:8px 0 6px;color:var(--espresso)}
+.pain p{color:var(--muted);font-size:15px}
+.pain q{display:block;margin-top:12px;padding-left:12px;border-left:2px solid var(--caramel);font-style:italic;font-size:15px;color:var(--coffee)}
+.pain q::before,.pain q::after{content:none}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+.story{margin-top:36px;background:var(--espresso);color:#F3E8DA;border-radius:24px;padding:30px 24px}
+.story p+p{margin-top:10px}
+.story .serif{color:#fff;font-size:26px;margin-bottom:14px}
+
+/* fit */
+.fit{display:grid;gap:16px;margin-top:28px}
+@media(min-width:760px){.fit{grid-template-columns:1.4fr 1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.box h3{font-family:Manrope,sans-serif;font-size:17px;font-weight:700;margin-bottom:14px}
+.list{list-style:none;display:grid;gap:10px}
+.list li{position:relative;padding-left:28px}
+.list li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border-radius:50%;background:var(--latte)}
+.list.yes li::before{background:var(--caramel);box-shadow:inset 0 0 0 4px var(--card)}
+.list.no li::before{background:none;border:1.5px solid var(--latte)}
+.box .extra{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:15px;color:var(--muted)}
+
+/* results */
+.alt{background:var(--sand)}
+.grid3{display:grid;gap:14px;margin-top:30px}
+@media(min-width:760px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.res{background:var(--card);border-radius:var(--r);padding:22px}
+.res h3{font-family:Manrope,sans-serif;font-size:17px;font-weight:700;margin-bottom:6px}
+.res p{font-size:15px;color:var(--muted)}
+.res .ic{width:38px;height:38px;border-radius:12px;background:var(--sand);display:grid;place-items:center;margin-bottom:14px;color:var(--coffee);font-weight:700}
+.proof{margin-top:22px;font-size:16px;color:var(--coffee);font-weight:600}
+
+/* modules */
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin-top:10px}
+summary{list-style:none;cursor:pointer;padding:20px 54px 20px 20px;position:relative;font-weight:700;color:var(--espresso)}
+summary::-webkit-details-marker{display:none}
+summary .num{color:var(--caramel);margin-right:10px;font-family:"Cormorant Garamond",serif;font-size:20px}
+summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:24px;font-weight:400;color:var(--caramel)}
+details[open] summary::after{content:"–"}
+details .body{padding:0 20px 20px;color:var(--muted);font-size:15px}
+details .body p+p{margin-top:8px}
+.bonus-tag{display:inline-block;margin-left:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--sand);color:var(--coffee);padding:3px 9px;border-radius:999px;vertical-align:middle}
+
+/* format */
+.fmt{display:grid;gap:12px;margin-top:28px}
+@media(min-width:760px){.fmt{grid-template-columns:1fr 1fr}}
+.fmt div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;font-size:15px}
+.fmt b{display:block;color:var(--espresso);font-size:15px;margin-bottom:2px}
+.guarantee{margin-top:22px;border-radius:24px;padding:28px 24px;background:linear-gradient(135deg,var(--latte),var(--sand));}
+.guarantee .serif{font-size:28px;margin-bottom:8px}
+
+/* tariffs */
+.plans{display:grid;gap:16px;margin-top:30px}
+@media(min-width:900px){.plans{grid-template-columns:repeat(3,1fr);align-items:start}}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px 22px}
+.plan h3{font-size:32px}
+.plan .meta{font-size:14px;color:var(--caramel);font-weight:600;margin:6px 0 18px}
+.plan .list{font-size:15px}
+.plan.vip{background:var(--espresso);color:#F0E4D4;border-color:var(--espresso)}
+.plan.vip h3{color:#fff}
+.plan.vip .meta{color:var(--latte)}
+.plan.vip .list li::before{background:var(--caramel);box-shadow:inset 0 0 0 4px var(--espresso)}
+.new{display:inline-block;font-size:10px;letter-spacing:.1em;font-weight:700;background:var(--caramel);color:#fff;padding:2px 7px;border-radius:6px;margin-right:6px;vertical-align:2px}
+.seats{margin-top:18px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.08);font-size:14px;color:#fff}
+.seats b{color:var(--latte)}
+.price-note{margin-top:22px;text-align:center;color:var(--muted);font-size:15px}
+.center{text-align:center}
+
+.cmp{margin-top:30px;overflow-x:auto;border-radius:var(--r);border:1px solid var(--line);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:520px}
+th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:center}
+th:first-child,td:first-child{text-align:left}
+thead th{background:var(--sand);color:var(--espresso);font-weight:700}
+td.y{color:var(--caramel);font-weight:700}
+td.n{color:var(--latte)}
+tr:last-child td{border-bottom:0}
+
+/* cases */
+.cases{display:grid;gap:16px;margin-top:30px}
+@media(min-width:860px){.cases{grid-template-columns:1fr 1fr}}
+.case{background:var(--card);border-radius:22px;padding:26px 22px;border:1px solid var(--line)}
+.case .who{font-weight:700;color:var(--espresso)}
+.case .where{font-size:14px;color:var(--muted);margin-bottom:16px}
+.big{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:40px;line-height:1;color:var(--coffee)}
+.big small{display:block;font-family:Manrope,sans-serif;font-size:13px;font-weight:600;color:var(--muted);margin-top:6px;line-height:1.4}
+.stats{display:flex;flex-wrap:wrap;gap:18px 26px;padding:16px 0;margin-bottom:12px;border-bottom:1px solid var(--line)}
+.case p{font-size:15px;color:var(--ink)}
+.case p+p{margin-top:8px}
+.case blockquote{margin-top:14px;font-style:italic;color:var(--coffee);font-size:15px;padding-left:12px;border-left:2px solid var(--caramel)}
+.tag{display:inline-block;font-size:12px;font-weight:600;background:var(--sand);color:var(--coffee);border-radius:999px;padding:3px 10px;margin-bottom:10px}
+
+/* about */
+.about{display:grid;gap:26px;margin-top:10px}
+@media(min-width:860px){.about{grid-template-columns:320px 1fr;align-items:center}}
+.photo{display:block;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:24px;background:var(--latte);max-width:320px;width:100%;height:auto}
+.facts{display:grid;gap:10px;margin-top:20px}
+.facts div{display:flex;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}
+.facts b{font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--coffee);min-width:92px;line-height:1}
+
+/* cta */
+.cta{background:var(--espresso);color:#F0E4D4;border-radius:28px;padding:44px 24px;text-align:center}
+.cta h2{color:#fff}
+.cta .btn-main{background:var(--caramel)}
+.cta .btn-ghost{color:#fff;border-color:rgba(255,255,255,.35)}
+.cta .btns{justify-content:center}
+
+/* form */
+.form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px 20px;margin-top:28px;max-width:720px}
+.field{margin-bottom:20px}
+.field>label,.field>.lbl{display:block;font-weight:700;font-size:15px;color:var(--espresso);margin-bottom:8px}
+.field input[type=text],.field input[type=tel],.field textarea,.field select{width:100%;font:inherit;font-size:16px;padding:14px 16px;border:1.5px solid var(--line);border-radius:14px;background:#fff;color:var(--ink)}
+.field textarea{min-height:90px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--caramel)}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{cursor:pointer}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts span{display:inline-block;padding:10px 14px;border:1.5px solid var(--line);border-radius:999px;font-size:14px;background:#fff;transition:.15s}
+.opts input:checked+span{background:var(--coffee);border-color:var(--coffee);color:#fff}
+.opts input:focus-visible+span{outline:2px solid var(--caramel);outline-offset:2px}
+.req{color:var(--caramel)}
+.thanks{display:none;text-align:center;padding:30px 10px}
+.thanks .serif{font-size:32px;margin-bottom:10px}
+
+footer{padding:40px 0 60px;font-size:14px;color:var(--muted);text-align:center}
+footer a{margin:0 8px}
+@media(max-width:480px){section{padding:52px 0}.btns .btn{width:100%}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">САЛОН-СИСТЕМА</a>
+  <div class="navlinks"><a href="#for">Для кого</a><a href="#program">Програма</a><a href="#formats">Формати</a><a href="#cases">Кейси</a><a href="#about">Про мене</a><a href="#faq">Питання</a></div>
+  <a class="btn btn-main" href="#anketa">Анкета</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div class="eyebrow">Менторська програма Яни Гурської · грудневий потік</div>
+  <h1>САЛОН-СИСТЕМА <span>2.0</span></h1>
+  <p class="lead">Для власниць салонів краси, косметологічних центрів, стоматологій, медичних клінік і сервісного бізнесу, які хочуть вийти з операційки і керувати бізнесом за цифрами.<br>2 місяці роботи над вашим бізнесом: фінанси, команда, адміністратор, клієнтська база.</p>
+  <div class="dates"><span class="chip">Старт — <b>7 грудня</b></span><span class="chip">Запис — <b>25 листопада – 6 грудня</b></span></div>
+  <div class="btns"><a class="btn btn-main" href="#anketa">Заповнити анкету</a><a class="btn btn-ghost" href="#formats">Подивитися формати</a></div>
+</div></header>
+
+<section id="pains"><div class="wrap">
+  <div class="eyebrow">Знайома ситуація?</div>
+  <h2>Ви власниця салону, клініки чи студії і відчуваєте, що бізнес тримається тільки на вас?</h2>
+  <div class="pains">
+    <div class="pain"><div class="n">01</div><h3>Ви працюєте руками більше за всіх</h3><p>Записуєте клієнтів, контролюєте команду, гасите пожежі.</p><q>Я своєю роботою закриваю всі дірки</q></div>
+    <div class="pain"><div class="n">02</div><h3>Запис повний, а грошей мало</h3><p>Дохід з'їдають зарплати й витрати, і ви не знаєте, скільки насправді заробляє бізнес.</p><q>Я нічого не прораховувала, якщо чесно</q></div>
+    <div class="pain"><div class="n">03</div><h3>Клієнти приходять раз і зникають</h3><q>Повернулися 5 клієнтів вже по 2 рази, зі 100. Де всі інші? Не знаю</q></div>
+    <div class="pain"><div class="n">04</div><h3>База є, але з нею ніхто не працює</h3><q>У мене зараз є клієнтська база, я не знаю, що з ними робити</q></div>
+    <div class="pain"><div class="n">05</div><h3>Адміністратор є, а результату немає</h3><q>Якщо я нагадаю, вони це роблять. Якщо не нагадаю, цього не робиться</q></div>
+    <div class="pain"><div class="n">06</div><h3>Ви боїтеся змін у команді</h3><p>Що підуть майстри, що будете занадто жорсткою.</p><q>Я боюсь не перегнути, не бути занадто строгою</q></div>
+    <div class="pain"><div class="n">07</div><h3>Часу немає ні на родину, ні на стратегію</h3><q>Як білка в колесі… біжу в п'ять напрямків одночасно</q></div>
+  </div>
+  <p class="note">Слова власниць салонів і клінік з моїх розборів. Імена не називаю.</p>
+  <div class="story">
+    <div class="serif">Я це дуже добре розумію, бо сама через це проходила.</div>
+    <p>У 2020-му народився мій син, а я ще працювала майстром. Їздила на роботу, відпрацьовувала три години, поверталася додому погодувати — і знову в салон.</p>
+    <p>Зараз я тижнями не буваю в салоні. Бізнес працює за системою, яку я вибудувала крок за кроком.</p>
+    <p>Цю систему я передаю у САЛОН-СИСТЕМІ.</p>
+  </div>
+</div></section>
+
+<section id="for" class="alt"><div class="wrap">
+  <div class="eyebrow">Для кого програма</div>
+  <h2>Програма вам підійде, якщо</h2>
+  <div class="fit">
+    <div class="box">
+      <ul class="list yes">
+        <li>у вас салон краси, студія, косметологічний центр, стоматологія, медична клініка чи інший сервісний бізнес, де працює команда від 2 людей;</li>
+        <li>бізнес уже працює, але все тримається на вас;</li>
+        <li>ви хочете зростати і не знаєте, як вийти з операційки;</li>
+        <li>вам потрібні інструменти, перевірені в живому бізнесі;</li>
+        <li>ви готові щотижня впроваджувати зміни у своєму бізнесі.</li>
+      </ul>
+      <p class="extra">Зі мною вже працювали власниці салонів і студій, косметологічних центрів, стоматологічної клініки, клінік естетичної медицини. Приходять і керуючі. Якщо ви вже вирішили відкривати свою справу — програма теж підійде: дві мої учениці пройшли її перед відкриттям.</p>
+    </div>
+    <div class="box">
+      <h3>Не підійде, якщо</h3>
+      <ul class="list no">
+        <li>ви поки тільки шукаєте ідею для бізнесу;</li>
+        <li>чекаєте «секретних фішок» і не плануєте впроваджувати.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="results"><div class="wrap">
+  <div class="eyebrow">Що зміниться після програми</div>
+  <h2>Ваш бізнес після 2 місяців роботи</h2>
+  <div class="grid3">
+    <div class="res"><div class="ic">₴</div><h3>Ви знаєте свої цифри</h3><p>Чистий прибуток, точку беззбитковості, рентабельність кожної послуги. У вас є фінплан на місяць.</p></div>
+    <div class="res"><div class="ic">2</div><h3>У команди є правила</h3><p>У кожного — посадова інструкція і KPI. Фахівці отримують відсоток, який бізнес витримує.</p></div>
+    <div class="res"><div class="ic">3</div><h3>Адміністратор продає і звітує</h3><p>Працює за скриптами, рахує перезапис, повертає втрачених клієнтів, заповнює вільні вікна.</p></div>
+    <div class="res"><div class="ic">4</div><h3>База приносить гроші</h3><p>Повторний запис стає головним показником бізнесу.</p></div>
+    <div class="res"><div class="ic">5</div><h3>Ви наймаєте за алгоритмом</h3><p>Знаєте, як знайти, навчити й утримати сильних людей.</p></div>
+    <div class="res"><div class="ic">6</div><h3>У вас є план росту</h3><p>Друга локація, нові послуги, вихід з-за крісла чи з кабінету.</p></div>
+  </div>
+  <p class="proof">Так працює мій салон Lucky Star: у червні 2026 ми закрили місяць з рентабельністю 38%.</p>
+</div></section>
+
+<section id="program" class="alt"><div class="wrap">
+  <div class="eyebrow">Програма</div>
+  <h2>7 модулів, які будують систему</h2>
+  <details><summary><span class="num">01</span>Власниця бізнесу і мислення власниці</summary><div class="body"><p>Аудит бізнесу: точка А → точка Б. Ваша зона відповідальності і що ви передаєте команді. Час за пріоритетами власниці. Перехід від роботи в бізнесі до роботи над бізнесом.</p></div></details>
+  <details><summary><span class="num">02</span>Фінанси</summary><div class="body"><p>Оборот, виручка і чистий прибуток. Точка беззбитковості й рентабельність кожної послуги. Ціни, порахувані з ваших цифр. Фінплан на місяць і контроль витрат. CRM як інструмент фінансового контролю.</p></div></details>
+  <details><summary><span class="num">03</span>Команда і найм</summary><div class="body"><p>Структура команди: ролі, функції, підпорядкування. Системний найм: портрет кандидата, співбесіда, стажування. Посадові інструкції. Мотивація фінансова і нефінансова. KPI майстрів і адміністратора. Як утримувати сильних і як звільняти, коли треба.</p></div></details>
+  <details><summary><span class="num">04</span>Адміністратор і сервіс</summary><div class="body"><p>Покроковий алгоритм роботи адміністратора. Скрипти запису, переносу, підтвердження візитів. Контроль графіка: вікна, запізнення, скасування. Сервісний шлях клієнта від першого звернення до наступного візиту. Адаптація нових адміністраторів.</p></div></details>
+  <details><summary><span class="num">05</span>Маркетинг і робота з клієнтами</summary><div class="body"><p>Позиціювання. Цільова аудиторія і контент, який приводить клієнтів. Instagram і особистий бренд власниці. Акції і програми лояльності. Основи таргетованої реклами. Як рахувати, що спрацювало.</p></div></details>
+  <details><summary><span class="num">06</span>Продажі</summary><div class="body"><p>Воронка від першого контакту. Робота з базою і втраченими клієнтами. Допродаж домашнього догляду. Скрипти рекомендацій для фахівців. Повторний запис як головний KPI. Заперечення без знижок.</p></div></details>
+  <details><summary><span class="num">07</span>Гранти<span class="bonus-tag">бонус</span></summary><div class="body"><p>Які грантові програми зараз доступні для українського сервісного бізнесу. Документи, цифри, презентація проєкту. Що писати в заявці. Супровід від подання до отримання коштів.</p><p>Модуль записала Оксана, кураторка програми: вона сама виграла 11 грантів. Я отримала 3 гранти на свій салон і заявки писала сама.</p></div></details>
+</div></section>
+
+<section id="format"><div class="wrap">
+  <div class="eyebrow">Формат роботи</div>
+  <h2>Як ми працюємо</h2>
+  <div class="fmt">
+    <div><b>Тривалість</b>2 місяці. Індивідуальний формат — 3 місяці.</div>
+    <div><b>Зустрічі</b>Раз на тиждень наживо в Zoom, 90 хвилин. Усе в записі.</div>
+    <div><b>Відеоуроки</b>7 модулів — у своєму темпі.</div>
+    <div><b>Домашні завдання</b>На прикладі вашого бізнесу.</div>
+    <div><b>Готові інструменти</b>Чек-листи, скрипти, таблиці, посадові інструкції.</div>
+    <div><b>Спільнота</b>Закритий Telegram-канал і чат учасниць.</div>
+    <div><b>Доступ</b>Матеріали лишаються у вас після програми.</div>
+    <div><b>Як потрапити</b>Заповнюєте анкету → я особисто зустрічаюся з вами в Zoom, дивлюся на ваш бізнес і раджу формат.</div>
+  </div>
+  <div class="guarantee">
+    <div class="serif">Моя гарантія</div>
+    <p>Працюю з вами, поки не отримаєте перший результат. Навіть якщо це довше, ніж 2 місяці.</p>
+  </div>
+</div></section>
+
+<section id="formats" class="alt"><div class="wrap">
+  <div class="eyebrow">Формати участі</div>
+  <h2>Один зміст — три формати</h2>
+  <p class="lead">Вартість і розстрочку до 6 місяців розповідаю особисто на зустрічі в Zoom після анкети.</p>
+  <div class="plans">
+    <div class="plan">
+      <h3>Самостійний</h3>
+      <div class="meta">2 місяці · старт у будь-який момент</div>
+      <ul class="list yes">
+        <li>відеоуроки всіх 7 модулів;</li>
+        <li>чек-листи, скрипти, посадові інструкції;</li>
+        <li>закритий Telegram-канал;</li>
+        <li>зворотний зв'язок від кураторки в каналі;</li>
+        <li>бонусний модуль про гранти.</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Груповий</h3>
+      <div class="meta">2 місяці · старт 7 грудня · запис 25.11–6.12</div>
+      <ul class="list yes">
+        <li>усе з «Самостійного»;</li>
+        <li>8 живих онлайн-зустрічей зі мною;</li>
+        <li>розбір вашого бізнесу в групі;</li>
+        <li>чат учасниць і спільнота випускниць.</li>
+      </ul>
+    </div>
+    <div class="plan vip">
+      <h3>Індивідуальний</h3>
+      <div class="meta">VIP · 3 місяці: 2 місяці програми + місяць підтримки · старт у будь-який момент, якщо є місце</div>
+      <ul class="list yes">
+        <li>усе з «Групового»;</li>
+        <li>3 додаткові сесії VIP-групи;</li>
+        <li>особиста стратегічна сесія зі мною;</li>
+        <li>глибокий аудит бізнесу: цифри, команда, сервіс;</li>
+        <li>контроль впровадження;</li>
+        <li>постійний зв'язок зі мною в Telegram-чаті;</li>
+        <li><span class="new">НОВЕ</span>блок «AI-керівник»: як зробити з Claude бізнес-аналітика для вашого бізнесу. 7 уроків, готові промпти, план упровадження AI на 30 днів;</li>
+        <li><span class="new">НОВЕ</span>налаштування дашборду для вашого бізнесу: разом визначаємо, які дані збирати, налаштовуємо дашборд і логіку внесення даних. Я сама веду Lucky Star через такий дашборд;</li>
+        <li>допомога з ботами, таргетованою рекламою і звітністю.</li>
+      </ul>
+      <div class="seats">Одночасно працюю не більше ніж з 6 ученицями.<br><b>Станом на 11 листопада вільно 5 місць.</b></div>
+    </div>
+  </div>
+
+  <div class="cmp"><table>
+    <thead><tr><th>Що входить</th><th>Самостійний</th><th>Груповий</th><th>Індивідуальний</th></tr></thead>
+    <tbody>
+      <tr><td>Тривалість</td><td>2 міс.</td><td>2 міс.</td><td>3 міс.</td></tr>
+      <tr><td>Відеоуроки 7 модулів</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td>Чек-листи, скрипти, посадові</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td>Закритий Telegram-канал</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td>Модуль про гранти</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td>Живі зустрічі з Яною</td><td class="n">—</td><td>8 групових</td><td>8 + 3 VIP</td></tr>
+      <tr><td>Розбір вашого бізнесу</td><td class="n">—</td><td>у групі</td><td>особисто</td></tr>
+      <tr><td>Спільнота випускниць</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td>Особиста стратегічна сесія</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td>Глибокий аудит і контроль впровадження</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td>Зв'язок з Яною в Telegram</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td>AI-керівник і дашборд бізнесу</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+    </tbody>
+  </table></div>
+  <div class="center"><a class="btn btn-main" style="margin-top:28px" href="#anketa">Заповнити анкету</a></div>
+</div></section>
+
+<section id="cases"><div class="wrap">
+  <div class="eyebrow">Кейси учениць</div>
+  <h2>Результати в цифрах</h2>
+  <div class="cases">
+    <article class="case">
+      <span class="tag">Груповий потік</span>
+      <div class="who">Юрій і Женя</div><div class="where">студія манікюру, Івано-Франківськ</div>
+      <div class="stats"><div class="big">+117 600 ₴<small>чистого прибутку<br>за перший місяць</small></div><div class="big">7 → 11<small>майстрів</small></div></div>
+      <p>Студії 5,5 років. 7 майстрів на 45–50%, адміністратор без звітності, рентабельність 20%.</p>
+      <p>Що змінили: майстри — 38–40% + KPI, 50% лише при виконанні фінплану. Звітність адміністратора і керуючої, дзвінки втраченим клієнтам. Прайс +50 грн — середній чек виріс з 850 до 900 грн.</p>
+      <blockquote>Ми майже не беремо участь в роботі бізнесу, але ми все знаємо… можемо в будь-який момент відкрити ту звітність</blockquote>
+    </article>
+    <article class="case">
+      <span class="tag">Індивідуальний формат</span>
+      <div class="who">Яна</div><div class="where">лікарка-ін'єкціоністка, косметологічний центр з нуля, Полтава</div>
+      <div class="stats"><div class="big">37% → 58%<small>рентабельність: 37% у перший місяць,<br>42% у другий, 58% у третій</small></div></div>
+      <p>10 років працювала сама, без команди. Прийшла за 2 місяці до відкриття.</p>
+      <p>Разом зробили посадові інструкції, фінплан і бюджет, систему зарплат, контроль першого місяця.</p>
+      <blockquote>На тисячу відсотків виправдано</blockquote>
+    </article>
+    <article class="case">
+      <div class="who">Віолетта Матвійків</div><div class="where">студія «VOLIA», Луцьк</div>
+      <div class="stats"><div class="big">×3<small>дохід</small></div><div class="big">3 → 7<small>команда</small></div><div class="big">+1<small>друга локація: 12 робочих<br>місць, 150 м² за 4 місяці</small></div></div>
+      <p>Сама працювала майстром, частину крісел здавала в оренду. Відмовилася від оренди і набрала команду.</p>
+      <p>Вийшла з ролі майстра в роль власниці.</p>
+    </article>
+    <article class="case">
+      <div class="who">Анастасія</div><div class="where">масажна студія, Київ</div>
+      <div class="stats"><div class="big">+30%<small>обороту за перший місяць</small></div><div class="big">+3<small>співробітники</small></div></div>
+      <p>Вийшла з ролі масажистки за станом здоров'я. В операційці був хаос, зони відповідальності ніхто не прописав.</p>
+      <p>Створили структуру управління, прозвонили базу і повернули втрачених клієнтів. Регламенти, інструкції і KPI для кожної посади.</p>
+    </article>
+    <article class="case">
+      <div class="who">Галина Сидор</div><div class="where">Центр здоров'я стопи, Стрий</div>
+      <div class="stats"><div class="big">1 → 5<small>команда</small></div></div>
+      <p>Працювала майстринею в кабінеті і хотіла відкрити студію. Пройшла програму перед відкриттям і відкрила центр.</p>
+      <p>Перейшла з ролі майстра в роль власниці.</p>
+    </article>
+  </div>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap">
+  <div class="about">
+    <img class="photo" src="yana.jpg" alt="Яна Гурська" width="733" height="1100" loading="lazy">
+    <div>
+      <div class="eyebrow">Про мене</div>
+      <h2>Я Яна Гурська</h2>
+      <p class="lead">Підприємиця і менторка для власниць б'юті та сервісного бізнесу. Мама сина.</p>
+      <p style="margin-top:12px">Салон краси Lucky Star у Ніжині — один з моїх бізнесів. Ще два працюють у сфері послуг. Тому я вчу тому, що щодня роблю сама: керувати кількома бізнесами за цифрами і системою, без постійної присутності.</p>
+      <div class="facts">
+        <div><b>2017</b><span>У б'юті-бізнесі з 2017 року. П'ять років працювала майстром, без системи. У 2023-му повністю перебудувала салон.</span></div>
+        <div><b>6 → 18</b><span>Так виросла команда за час війни.</span></div>
+        <div><b>1000+</b><span>Процедур на місяць у місті на 55 тисяч людей.</span></div>
+        <div><b>3</b><span>Гранти на розвиток салону.</span></div>
+        <div><b>800 тис.</b><span>Понад 800 тисяч гривень вклала у власне навчання.</span></div>
+      </div>
+      <p style="margin-top:20px">Усі інструменти програми працюють у моєму салоні. Скрипти, таблиці, посадові — ті самі, за якими працює моя команда.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="eyebrow">Питання й відповіді</div>
+  <h2>Що питають найчастіше</h2>
+  <details><summary>У мене не вистачає часу — бізнес і діти.</summary><div class="body"><p>Відео дивитеся у своєму темпі. Зустрічі раз на тиждень по 90 хвилин, усе в записі. Я сама мама, і знаю, як це.</p></div></details>
+  <details><summary>Мій бізнес ще малий. Мені не рано?</summary><div class="body"><p>Систему простіше закласти, поки команда невелика. Дві мої учениці пройшли програму ще до відкриття.</p></div></details>
+  <details><summary>У мене вже велика команда. Це для мене?</summary><div class="body"><p>Так. Ви працюватимете з делегуванням, KPI, фінконтролем і масштабуванням. Серед учениць — студія з 11 майстрами і стоматологічна клініка з двома локаціями.</p></div></details>
+  <details><summary>А якщо в мене не вийде?</summary><div class="body"><p>Працюю з вами, поки не отримаєте перший результат. Навіть якщо це довше, ніж 2 місяці.</p></div></details>
+  <details><summary>Чим ви відрізняєтеся від інших курсів?</summary><div class="body"><p>Я власниця діючого салону. Усе, що даю, перевірено в Lucky Star. Окремий модуль про гранти веде Оксана, яка сама виграла 11 грантів.</p></div></details>
+  <details><summary>Можна почати не в дату потоку?</summary><div class="body"><p>Так. Самостійний та індивідуальний формат — у будь-який момент. Груповий стартує 7 грудня, запис — з 25 листопада до 6 грудня.</p></div></details>
+  <details><summary>Скільки коштує програма?</summary><div class="body"><p>Залежить від формату. Вартість розповідаю особисто на зустрічі в Zoom після анкети: так я одразу бачу ваш бізнес і раджу формат, який вам підійде. Є розстрочка до 6 місяців.</p></div></details>
+  <details><summary>Що буде після анкети?</summary><div class="body"><p>Я напишу вам у Telegram і домовимося про зустріч у Zoom. Подивимося на ваш бізнес, і я розповім, з чого почати саме вам.</p></div></details>
+</div></section>
+
+<section id="anketa" class="alt"><div class="wrap">
+  <div class="cta">
+    <h2>Готові навести лад у своєму бізнесі?</h2>
+    <p>Груповий потік стартує 7 грудня. Запис — з 25 листопада до 6 грудня.<br>Самостійний та індивідуальний формат — у будь-який момент.</p>
+    <p style="margin-top:10px">Заповніть анкету — я особисто зустрінуся з вами в Zoom і розповім, який формат вам підійде.</p>
+    <div class="btns"><a class="btn btn-ghost" href="https://t.me/yana_gurska" target="_blank" rel="noopener">Поставити питання в Telegram</a></div>
+  </div>
+
+  <form class="form" id="form" novalidate>
+    <h3 class="serif" style="font-size:32px;margin-bottom:6px">Анкета на програму</h3>
+    <p class="note" style="margin:0 0 24px">2–3 хвилини. Після анкети я напишу вам і домовимося про зустріч у Zoom.</p>
+
+    <div class="field"><label for="f-name">Ваше ім'я <span class="req">*</span></label><input id="f-name" name="name" type="text" required autocomplete="given-name"></div>
+    <div class="field"><label for="f-contact">Telegram або телефон для зв'язку <span class="req">*</span></label><input id="f-contact" name="contact" type="text" required placeholder="@нік або +380…"></div>
+    <div class="field"><label for="f-city">Місто <span class="req">*</span></label><input id="f-city" name="city" type="text" required></div>
+
+    <div class="field"><span class="lbl">Ваш бізнес</span><div class="opts">
+      <label><input type="radio" name="business" value="салон краси"><span>салон краси</span></label>
+      <label><input type="radio" name="business" value="студія"><span>студія</span></label>
+      <label><input type="radio" name="business" value="косметологічний центр"><span>косметологічний центр</span></label>
+      <label><input type="radio" name="business" value="стоматологія"><span>стоматологія</span></label>
+      <label><input type="radio" name="business" value="медична клініка"><span>медична клініка</span></label>
+      <label><input type="radio" name="business" value="інший сервісний бізнес"><span>інший сервісний бізнес</span></label>
+      <label><input type="radio" name="business" value="кабінет"><span>кабінет</span></label>
+      <label><input type="radio" name="business" value="ще не відкрила"><span>ще не відкрила</span></label>
+    </div></div>
+
+    <div class="field"><span class="lbl">Ніша</span><div class="opts">
+      <label><input type="checkbox" name="niche" value="манікюр"><span>манікюр</span></label>
+      <label><input type="checkbox" name="niche" value="перукарські"><span>перукарські</span></label>
+      <label><input type="checkbox" name="niche" value="косметологія"><span>косметологія</span></label>
+      <label><input type="checkbox" name="niche" value="масаж"><span>масаж</span></label>
+      <label><input type="checkbox" name="niche" value="стоматологія"><span>стоматологія</span></label>
+      <label><input type="checkbox" name="niche" value="естетична медицина"><span>естетична медицина</span></label>
+      <label><input type="checkbox" name="niche" value="інше"><span>інше</span></label>
+    </div></div>
+
+    <div class="field"><span class="lbl">Ваша роль</span><div class="opts">
+      <label><input type="radio" name="role" value="власниця"><span>власниця</span></label>
+      <label><input type="radio" name="role" value="власниця і майстер"><span>власниця, яка ще працює майстром</span></label>
+      <label><input type="radio" name="role" value="керуюча"><span>керуюча</span></label>
+    </div></div>
+
+    <div class="field"><span class="lbl">Скільки людей у команді</span><div class="opts">
+      <label><input type="radio" name="team" value="тільки я"><span>тільки я</span></label>
+      <label><input type="radio" name="team" value="2–5"><span>2–5</span></label>
+      <label><input type="radio" name="team" value="6–10"><span>6–10</span></label>
+      <label><input type="radio" name="team" value="більше 10"><span>більше 10</span></label>
+    </div></div>
+
+    <div class="field"><span class="lbl">Скільки років бізнесу</span><div class="opts">
+      <label><input type="radio" name="years" value="до року"><span>до року</span></label>
+      <label><input type="radio" name="years" value="1–3"><span>1–3</span></label>
+      <label><input type="radio" name="years" value="3–5"><span>3–5</span></label>
+      <label><input type="radio" name="years" value="більше 5"><span>більше 5</span></label>
+    </div></div>
+
+    <div class="field"><span class="lbl">Оборот на місяць</span><div class="opts">
+      <label><input type="radio" name="revenue" value="до 100 тис"><span>до 100 тис. ₴</span></label>
+      <label><input type="radio" name="revenue" value="100–300 тис"><span>100–300 тис.</span></label>
+      <label><input type="radio" name="revenue" value="300–600 тис"><span>300–600 тис.</span></label>
+      <label><input type="radio" name="revenue" value="понад 600 тис"><span>понад 600 тис.</span></label>
+      <label><input type="radio" name="revenue" value="не рахую"><span>не рахую</span></label>
+    </div></div>
+
+    <div class="field"><span class="lbl">Що зараз найбільше заважає</span><div class="opts">
+      <label><input type="checkbox" name="pain" value="працюю руками"><span>працюю руками більше за всіх</span></label>
+      <label><input type="checkbox" name="pain" value="мало прибутку"><span>мало прибутку</span></label>
+      <label><input type="checkbox" name="pain" value="клієнти не повертаються"><span>клієнти не повертаються</span></label>
+      <label><input type="checkbox" name="pain" value="база не працює"><span>база не працює</span></label>
+      <label><input type="checkbox" name="pain" value="адміністратор"><span>адміністратор без результату</span></label>
+      <label><input type="checkbox" name="pain" value="найм і команда"><span>найм і команда</span></label>
+      <label><input type="checkbox" name="pain" value="немає часу"><span>немає часу</span></label>
+      <label><input type="checkbox" name="pain" value="інше"><span>інше</span></label>
+    </div></div>
+
+    <div class="field"><label for="f-goal">Якого результату хочете через 2–3 місяці?</label><textarea id="f-goal" name="goal"></textarea></div>
+
+    <div class="field"><span class="lbl">Який формат цікавить</span><div class="opts">
+      <label><input type="radio" name="format" value="груповий"><span>груповий</span></label>
+      <label><input type="radio" name="format" value="індивідуальний"><span>індивідуальний</span></label>
+      <label><input type="radio" name="format" value="самостійний"><span>самостійний</span></label>
+      <label><input type="radio" name="format" value="ще не знаю"><span>ще не знаю</span></label>
+    </div></div>
+
+    <div class="field"><label for="f-time">Коли вам зручно зустрітися в Zoom?</label><input id="f-time" name="time" type="text" placeholder="наприклад: будні після 18:00"></div>
+
+    <div class="field"><span class="lbl">Звідки дізналися про програму</span><div class="opts">
+      <label><input type="radio" name="source" value="ефір"><span>ефір</span></label>
+      <label><input type="radio" name="source" value="Instagram"><span>Instagram</span></label>
+      <label><input type="radio" name="source" value="Telegram"><span>Telegram</span></label>
+      <label><input type="radio" name="source" value="реклама"><span>реклама</span></label>
+      <label><input type="radio" name="source" value="рекомендація"><span>рекомендація</span></label>
+    </div></div>
+
+    <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Сайт<input name="website" tabindex="-1" autocomplete="off"></label></div>
+    <p class="note" id="err" style="color:#A0522D;display:none;margin-bottom:12px">Заповніть, будь ласка, ім'я, контакт і місто.</p>
+    <button class="btn btn-main" type="submit" style="width:100%">Надіслати анкету</button>
+  </form>
+  <div class="form thanks" id="thanks">
+    <div class="serif">Дякую!</div>
+    <p>Я отримала вашу анкету і напишу вам у Telegram протягом доби.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="logo" style="margin-bottom:10px">САЛОН-СИСТЕМА</div>
+  <a href="https://www.instagram.com/yana_gurska" target="_blank" rel="noopener">@yana_gurska</a>·<a href="https://t.me/yana_gurska" target="_blank" rel="noopener">Telegram</a>·<a href="https://www.instagram.com/luckystar.studio" target="_blank" rel="noopener">Lucky Star Studio</a>
+  <p style="margin-top:12px">© 2026 Яна Гурська</p>
+</div></footer>
+
+<script>
+// Анкета → Google Apps Script (таблиця «Анкети САЛОН-СИСТЕМА 2.0» + Telegram). Адреса /exec вебдодатка:
+var ANKETA_URL = 'https://script.google.com/macros/s/AKfycbxW477zRNUSRrZ-vx4Cb5beUSQnRiBUZ561MsO9nvWGALkw7OTB2-2yv-XkxK81BUhu/exec';
+
+document.getElementById('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target, err = document.getElementById('err');
+  var ok = ['name', 'contact', 'city'].every(function (n) { return f[n].value.trim(); });
+  err.textContent = "Заповніть, будь ласка, ім'я, контакт і місто.";
+  err.style.display = ok ? 'none' : 'block';
+  if (!ok) return;
+
+  var data = {};
+  new FormData(f).forEach(function (v, k) { data[k] = data[k] ? data[k] + ', ' + v : v; });
+  var q = new URLSearchParams(location.search);
+  data.utm = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content']
+    .map(function (k) { return q.get(k); }).filter(Boolean).join(' / ');
+
+  var btn = f.querySelector('button');
+  btn.disabled = true; btn.textContent = 'Надсилаю…';
+  var done = function () {
+    f.style.display = 'none';
+    var t = document.getElementById('thanks'); t.style.display = 'block';
+    t.scrollIntoView({behavior: 'smooth', block: 'center'});
+  };
+  if (!ANKETA_URL) { done(); return; }
+  // text/plain без заголовків — щоб браузер не робив зайвий запит-перевірку до Google
+  fetch(ANKETA_URL, {method: 'POST', mode: 'no-cors', body: JSON.stringify(data)})
+    .then(done)
+    .catch(function () {
+      btn.disabled = false; btn.textContent = 'Надіслати анкету';
+      err.textContent = 'Не вдалося надіслати. Перевірте інтернет або напишіть мені в Telegram: @yana_gurska';
+      err.style.display = 'block';
+    });
+});
+</script>
+</body>
+</html>

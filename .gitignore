@@ -1,0 +1,6 @@
+# Публікуємо лише сторінку і фото
+*
+!index.html
+!yana.jpg
+!.gitignore
+!.nojekyll
